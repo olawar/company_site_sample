@@ -1,9 +1,24 @@
+html{
+  font-size: 62.5%;
+  font-family: latoregular, sans-serif;
+}
+
 .company-page-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0;
   width: 100%;
+  font-size: 1.4rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.container-content {
+  width: 60%;
+  margin: 0 20%;
 }
 
 /*home page*/
@@ -18,50 +33,44 @@
 }
 
 .introduction-text{
-  width: 60%;
-  margin: 0 20% 5% 20%;
+  margin: 10% 0 10% 0;
   text-align: center;
   vertical-align: middle;
+  font-family: existencelight, sans-serif;
   h1 {
-    font-size: 2em;
+    font-size: 5rem;
     color: white;
-    margin: 1em 0;
+    margin: 0 0 7% 0;
     span {
       color: map_get($colors, violetDefault);
       font-size: inherit;
     }
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 2.6rem;
     color: white;
-    margin: 0.75em;
+    margin: 3%;
   }
   p {
     color: white;
-    font-size: 1em;
   }
 }
 
 .introduction-icons {
   display: flex;
   flex-direction: row;
-  margin: 0 20%;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
   align-items: center;
-  height: 15em;
+  height: 34rem;
   color: white;
-  width: 60%;
-  }
-
-
-object {
-  height: 6em;
-  width: 6em;
 }
 
-
+object {
+  height: 10rem;
+  width: 10rem;
+}
 
 .introduction-icons-flex:nth-child(1) {
   order: 0;
@@ -103,4 +112,105 @@ object {
   flex: 1 1 auto;
   align-self: auto;
 }
+
+/*sticky menu*/
+
+.sticky-nav {
+  width: 100%;
+  height: 7rem;
+  background-color: white;
+}
+
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  padding: 4% 0;
+  &:first-child {
+    order: 0;
+    flex: 15 1 auto;
+    align-self: flex-start;
+  }
+  &:not(first-child) {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: flex-end;
+    //padding: 2% 0;
+    }
+  }
+
+.nav-item {
+  text-transform: uppercase;
+  color: map_get($colors, grayDark);
+  font-size: 1rem;
+}
+
+.company-logo2 {
+  font-family: existencelight, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: map_get($colors, grayDark);
+  width: 27rem;
+  span {
+    color: map_get($colors, violetDefault);
+  }
+}
+
+/*for js*/
+
+.sticky{
+  position: fixed;
+  top: 0;
+}
+
+.active {
+  color: map_get($colors, violetDefault);
+}
+
+/*About Us*/
+
+.about-us{
+  width: 100%;
+  height: 200px;
+  background-color: map_get($colors, grayBackground);
+}
+
+//Option with float//
+
+//nav {
+//  background: white;
+//  width: 100%;
+//  height: 1rem;
+//  box-sizing: border-box;
+//  display: block;
+//}
+//
+//.nav-content {
+//  text-align: end;
+//  li {
+//  display: inline-block;
+//  text-align: end;
+//  }
+//}
+//
+//.nav-item {
+//  float: right;
+//  font-size: 0.5em;
+//  margin-left: 1em;
+//  text-transform: uppercase;
+//  color: map_get($colors, greyDark);
+//}
+//
+//.company-logo2 {
+//  float: left;
+//  font-family: existencelight, sans-serif;
+//  color: map_get($colors, greyDark);
+//  span{
+//    color: map_get($colors, violetDefault);
+//  }
+//}
+
+/*about us*/
 

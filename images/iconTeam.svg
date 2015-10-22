@@ -12,7 +12,7 @@
         fill-opacity: 0.1;
       }
 
-      .cls-1:hover, cls-2:hover, .cls-4:hover{
+      .cls-1:hover, cls-2:hover{
         stroke: #9f449b;
         stroke-linejoin: round;
         stroke-width: 4px;
@@ -31,7 +31,7 @@
 
       .cls-4 {
         text-anchor: middle;
-        font-family: "Lato";
+        font-family: latoregular, sans-serif;
       }
     </style>
   </defs>
