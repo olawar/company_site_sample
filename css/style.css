@@ -187,7 +187,7 @@ object {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: stretch;
-  padding: 4% 0;
+  padding: 2.5rem 0;
 }
 .nav-flex:first-child {
   order: 0;
@@ -230,10 +230,61 @@ object {
 /*About Us*/
 .about-us {
   width: 100%;
-  height: 200px;
+  height: 50rem;
   background-color: #eeeeee;
 }
 
-/*about us*/
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  height: 50rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.about-item-flex {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2%;
+  box-sizing: border-box;
+  font-family: latoregular, sans-serif;
+}
+.about-item-flex h2 {
+  color: #676767;
+  font-weight: lighter;
+  margin: 20% 0;
+}
+.about-item-flex p {
+  color: #676767;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+.about-more {
+  height: 50rem;
+  margin: 10% 0;
+}
+.about-more h1 {
+  text-align: center;
+  background-image: url("../images/aboutTitle.png");
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-sizing: border-box;
+  font-size: 2.6rem;
+  font-family: existencelight, sans-serif;
+  color: #676767;
+  padding: 1.5rem;
+}
+.about-more img {
+  height: 50%;
+}
 
 /*# sourceMappingURL=style.css.map */
