@@ -1,0 +1,15 @@
+@import "variables";
+
+@mixin phone {
+  @media #{$smartphoneWidth} {
+    @content;
+  }
+};
+
+
+@mixin tablet {
+  @media #{$tabletWidth} {
+    @content;
+  }
+};
+
