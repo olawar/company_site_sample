@@ -65,28 +65,10 @@ html {
   font-family: latoregular, sans-serif;
 }
 
-.company-page-flex {
+.company-page {
   padding: 0;
   width: 100%;
   font-size: 1.4rem;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
 }
 
 .clear {
@@ -95,7 +77,9 @@ html {
 
 .container-content {
   width: 60%;
-  margin: 0 20%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*home page*/
@@ -106,19 +90,10 @@ html {
   padding-bottom: 59%;
   height: 0;
   background-repeat: no-repeat;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
 }
 
 .introduction-text {
-  margin: 10% 0 10% 0;
+  padding: 10% 0;
   text-align: center;
   vertical-align: middle;
   font-family: existencelight, sans-serif;
@@ -254,14 +229,14 @@ object {
 /*About Us*/
 .about-us {
   width: 100%;
-  height: 50rem;
+  height: auto;
   background-color: #eeeeee;
 }
 
 .about-flex {
   display: flex;
   flex-direction: row;
-  height: 50rem;
+  height: 45rem;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
@@ -290,8 +265,14 @@ object {
   line-height: 1.4rem;
 }
 
+.about-us-more {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
 .about-more {
-  height: 50rem;
+  height: auto;
   margin: 10% 0;
 }
 .about-more h1 {
@@ -302,7 +283,7 @@ object {
   background-position: center;
   background-size: contain;
   box-sizing: border-box;
-  margin: 5.6rem;
+  margin: 6rem;
   font-size: 2.6rem;
   font-family: existencelight, sans-serif;
   color: #676767;
@@ -311,13 +292,14 @@ object {
 .about-more h1 span {
   color: #9f449b;
 }
-.about-more img {
-  height: 50%;
-}
 
 .about-more-flex {
   display: flex;
   flex-direction: row;
+}
+.about-more-flex img {
+  width: 60%;
+  height: auto;
 }
 .about-more-flex .about-more-text {
   padding: 1rem;
@@ -325,6 +307,7 @@ object {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 40%;
 }
 .about-more-flex .about-more-text p {
   font-size: 1rem;
@@ -332,14 +315,15 @@ object {
   line-height: 1.8rem;
 }
 .about-more-flex .about-more-text a {
-  width: 50%;
+  width: 13rem;
   background-color: #9f449b;
   font-size: 1.2rem;
-  height: 3.5rem;
+  height: 4rem;
   border-radius: 0.25rem;
   text-align: center;
   padding: 1.1rem;
   box-sizing: border-box;
+  box-shadow: inset 0px -15px 0px -5px #6b2e68;
 }
 .about-more-flex .about-more-text a:link {
   text-decoration: none;
@@ -348,6 +332,273 @@ object {
 .about-more-flex .about-more-text a:visited {
   text-decoration: none;
   color: white;
+}
+
+/*About divider*/
+.about-divider {
+  width: 100%;
+  height: 30rem;
+  background-color: blue;
+}
+.about-divider object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+.about-divider p {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*Team*/
+.team {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.our-team {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.our-team h1 {
+  text-align: center;
+  background-image: url("../images/aboutTitle.png");
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-sizing: border-box;
+  margin: 6rem;
+  font-size: 2.6rem;
+  font-family: existencelight, sans-serif;
+  color: #676767;
+  padding: 1.5rem;
+}
+.our-team h1 span {
+  color: #9f449b;
+}
+
+.team-arrows {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.team-arrows img {
+  padding: 0.25rem;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 6rem;
+}
+
+ul.team-slider li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  box-sizing: border-box;
+  margin: 1.4%;
+}
+ul.team-slider h2 {
+  text-transform: uppercase;
+  padding-top: 3rem;
+  color: #676767;
+  font-size: 1.3rem;
+}
+ul.team-slider h3 {
+  padding: 2rem;
+  color: #ccd0d2;
+  font-size: 1rem;
+}
+
+.social-icons {
+  margin: 0 10%;
+}
+
+.our-skills h1 {
+  text-align: center;
+  background-image: url("../images/aboutTitle.png");
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-sizing: border-box;
+  margin: 6.5rem;
+  font-size: 2.6rem;
+  font-family: existencelight, sans-serif;
+  color: #676767;
+  padding: 1.5rem;
+}
+.our-skills h1 span {
+  color: #9f449b;
+}
+
+.skills-flex {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-bottom: 6rem;
+}
+
+.skills-column {
+  width: 20rem;
+  align-content: center;
+}
+.skills-column:first-child {
+  margin-right: 10%;
+}
+.skills-column:last-child {
+  margin-left: 10%;
+}
+
+.bar {
+  height: auto;
+  width: 20rem;
+}
+.bar h2 {
+  text-transform: uppercase;
+  padding: 2rem 0;
+  color: black;
+  font-size: 1.3rem;
+  float: left;
+}
+.bar p {
+  font-size: 1.3rem;
+  color: #676767;
+  float: right;
+  padding: 2rem 0;
+}
+
+.web-design .outer {
+  height: 1.5rem;
+  width: 20rem;
+  background-color: #ccd0d2;
+}
+.web-design .inner {
+  height: 1.5rem;
+  width: 90%;
+  background-color: #9f449b;
+}
+
+.html-css .outer {
+  height: 1.5rem;
+  width: 20rem;
+  background-color: #ccd0d2;
+}
+.html-css .inner {
+  height: 1.5rem;
+  width: 75%;
+  background-color: #9f449b;
+}
+
+.graphic-design .outer {
+  height: 1.5rem;
+  width: 20rem;
+  background-color: #ccd0d2;
+}
+.graphic-design .inner {
+  height: 1.5rem;
+  width: 70%;
+  background-color: #9f449b;
+}
+
+.ui-ux .outer {
+  height: 1.5rem;
+  width: 20rem;
+  background-color: #ccd0d2;
+}
+.ui-ux .inner {
+  height: 1.5rem;
+  width: 85%;
+  background-color: #9f449b;
+}
+
+/*Services*/
+.services {
+  width: 100%;
+  height: auto;
+  background-color: #eeeeee;
+}
+
+.services-data {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.data-column {
+  width: 25%;
+  display: block;
+  padding-top: 6rem;
+  text-align: center;
+}
+.data-column h2 {
+  color: black;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.data-column p {
+  font-size: 1rem;
+  color: #676767;
+  padding-top: 1rem;
+}
+
+.services-slider-box {
+  margin-top: 6rem;
+}
+.services-slider-box object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-slider li {
+  text-align: center;
+}
+.services-slider li img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2rem;
+}
+.services-slider li p:first-of-type {
+  color: #676767;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+.services-slider li p:last-of-type {
+  color: #676767;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

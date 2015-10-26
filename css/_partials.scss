@@ -1,33 +1,13 @@
 html{
   font-size: 18px;
+  //mixin dla Firefoxa i IE na 16px
   font-family: latoregular, sans-serif;
 }
 
-.company-page-flex {
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
+.company-page {
   padding: 0;
   width: 100%;
   font-size: 1.4rem;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
 }
 
 
@@ -37,7 +17,9 @@ html{
 
 .container-content {
   width: 60%;
-  margin: 0 20%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*home page*/
@@ -49,21 +31,12 @@ html{
   padding-bottom: 59%;
   height: 0;
   background-repeat: no-repeat;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
 }
 
 //dla Firefoxa do mixinu: background-size:cover; padding-bottom: 0; i ¿adnej wysokoœci
 
 .introduction-text{
-  margin: 10% 0 10% 0;
+  padding: 10% 0;
   text-align: center;
   vertical-align: middle;
   font-family: existencelight, sans-serif;
@@ -142,6 +115,7 @@ object {
   flex: 1 1 auto;
   align-self: auto;
 }
+
 
 /*sticky menu*/
 
@@ -240,14 +214,14 @@ object {
 
 .about-us{
   width: 100%;
-  height: 50rem;
+  height: auto;
   background-color: map_get($colors, grayBackground);
 }
 
 .about-flex {
   display: flex;
   flex-direction: row;
-  height: 50rem;
+  height: 45rem;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
@@ -276,8 +250,14 @@ object {
   }
 }
 
+.about-us-more{
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
 .about-more {
-  height: 50rem;
+  height: auto;
   margin: 10% 0;
   h1{
     text-align: center;
@@ -287,7 +267,7 @@ object {
     background-position: center;
     background-size: contain;
     box-sizing: border-box;
-    margin: 5.6rem;
+    margin: 6rem;
     font-size: 2.6rem;
     font-family: existencelight, sans-serif;
     color: map_get($colors, grayDark);
@@ -296,34 +276,37 @@ object {
       color: map_get($colors, violetDefault);
     }
   }
-  img{
-    height: 50%;
-  }
 }
 
 .about-more-flex {
   display: flex;
   flex-direction: row;
+  img{
+    width: 60%;
+    height: auto;
+  }
   .about-more-text {
     padding: 1rem;
     font-family: latoregular, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 40%;
     p {
       font-size: 1rem;
       color: map_get($colors, grayDark);
       line-height: 1.8rem;
     }
     a {
-      width: 50%;
+      width: 13rem;
       background-color: map_get($colors, violetDefault);
       font-size: 1.2rem;
-      height: 3.5rem;
+      height: 4rem;
       border-radius: 0.25rem;
       text-align: center;
       padding: 1.1rem;
       box-sizing: border-box;
+      box-shadow: inset 0px -15px 0px -5px map_get($colors, violetShadow);
       &:link {
         text-decoration: none;
         color: white;
@@ -331,6 +314,296 @@ object {
       &:visited {
         text-decoration: none;
         color: white;
+      }
+    }
+  }
+}
+
+/*About divider*/
+
+.about-divider{
+  width: 100%;
+  height: 30rem;
+  background-color: blue;
+  object{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+  p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+/*Team*/
+
+.team {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.our-team {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  h1{
+    text-align: center;
+    background-image: url("../images/aboutTitle.png");
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+    margin: 6rem;
+    font-size: 2.6rem;
+    font-family: existencelight, sans-serif;
+    color: map_get($colors, grayDark);
+    padding: 1.5rem;
+    span {
+      color: map_get($colors, violetDefault);
+    }
+  }
+}
+
+.team-arrows{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  img {
+    padding: 0.25rem;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin-bottom: 6rem;
+  }
+}
+
+ul.team-slider {
+  li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 1.4%;
+  }
+  h2 {
+    text-transform: uppercase;
+    padding-top: 3rem;
+    color: map_get($colors, grayDark);
+    font-size: 1.3rem;
+  }
+  h3 {
+    padding: 2rem;
+    color: map_get($colors, grayLight);
+    font-size: 1rem;
+  }
+}
+
+.social-icons {
+  margin: 0 10%;
+}
+
+
+.our-skills {
+  h1{
+    text-align: center;
+    background-image: url("../images/aboutTitle.png");
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+    margin: 6.5rem;
+    font-size: 2.6rem;
+    font-family: existencelight, sans-serif;
+    color: map_get($colors, grayDark);
+    padding: 1.5rem;
+    span {
+      color: map_get($colors, violetDefault);
+    }
+  }
+}
+.skills-flex{
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-bottom: 6rem;
+}
+
+.skills-column {
+  width: 20rem;
+  align-content: center;
+  &:first-child{
+    margin-right: 10%;
+  }
+  &:last-child{
+    margin-left: 10%;
+  }
+}
+
+.bar {
+  height: auto;
+  width: 20rem;
+  h2{
+    text-transform: uppercase;
+    padding: 2rem 0;
+    color: black;
+    font-size: 1.3rem;
+    float: left;
+  }
+  p {
+    font-size: 1.3rem;
+    color: map_get($colors, grayDark);
+    float: right;
+    padding: 2rem 0;
+  }
+}
+
+.web-design {
+  .outer {
+    height: 1.5rem;
+    width: 20rem;
+    background-color: map_get($colors, grayLight);
+  }
+
+  .inner {
+    height: 1.5rem;
+    width: 90%;
+    background-color: map_get($colors, violetDefault);
+  }
+}
+
+.html-css {
+   .outer {
+    height: 1.5rem;
+    width: 20rem;
+    background-color: map_get($colors, grayLight);
+  }
+
+  .inner {
+    height: 1.5rem;
+    width: 75%;
+    background-color: map_get($colors, violetDefault);
+  }
+}
+
+.graphic-design {
+  .outer {
+    height: 1.5rem;
+    width: 20rem;
+    background-color: map_get($colors, grayLight);
+  }
+
+  .inner {
+    height: 1.5rem;
+    width: 70%;
+    background-color: map_get($colors, violetDefault);
+  }
+}
+
+.ui-ux {
+  .outer {
+    height: 1.5rem;
+    width: 20rem;
+    background-color: map_get($colors, grayLight);
+  }
+
+  .inner {
+    height: 1.5rem;
+    width: 85%;
+    background-color: map_get($colors, violetDefault);
+  }
+}
+
+/*Services*/
+
+.services {
+  width: 100%;
+  height: auto;
+  background-color: map_get($colors, grayBackground);
+}
+
+.services-data{
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.data-column {
+  width: 25%;
+  display: block;
+  padding-top: 6rem;
+  text-align: center;
+  h2{
+    color: black;
+    font-size: 3rem;
+    font-weight: lighter;
+  }
+  p {
+    font-size: 1rem;
+    color: map_get($colors, grayDark);
+    padding-top: 1rem;
+  }
+}
+
+.services-slider-box {
+  margin-top: 6rem;
+  object {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.services-slider {
+  li{
+    text-align: center;
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 2rem;
+    }
+    p {
+      &:first-of-type {
+        color: map_get($colors, grayDark);
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: lighter;
+        margin-bottom: 2rem;
+      }
+      &:last-of-type {
+        color: map_get($colors, grayDark);
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: lighter;
+        text-transform: uppercase;
       }
     }
   }
