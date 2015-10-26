@@ -1,16 +1,35 @@
 html{
-  font-size: 62.5%;
+  font-size: 18px;
   font-family: latoregular, sans-serif;
 }
 
 .company-page-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
   padding: 0;
   width: 100%;
   font-size: 1.4rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
+
 
 .clear {
   clear: both;
@@ -30,6 +49,15 @@ html{
   padding-bottom: 59%;
   height: 0;
   background-repeat: no-repeat;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 //dla Firefoxa do mixinu: background-size:cover; padding-bottom: 0; i ¿adnej wysokoœci
@@ -259,12 +287,51 @@ object {
     background-position: center;
     background-size: contain;
     box-sizing: border-box;
+    margin: 5.6rem;
     font-size: 2.6rem;
     font-family: existencelight, sans-serif;
     color: map_get($colors, grayDark);
     padding: 1.5rem;
+    span {
+      color: map_get($colors, violetDefault);
+    }
   }
   img{
     height: 50%;
+  }
+}
+
+.about-more-flex {
+  display: flex;
+  flex-direction: row;
+  .about-more-text {
+    padding: 1rem;
+    font-family: latoregular, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      font-size: 1rem;
+      color: map_get($colors, grayDark);
+      line-height: 1.8rem;
+    }
+    a {
+      width: 50%;
+      background-color: map_get($colors, violetDefault);
+      font-size: 1.2rem;
+      height: 3.5rem;
+      border-radius: 0.25rem;
+      text-align: center;
+      padding: 1.1rem;
+      box-sizing: border-box;
+      &:link {
+        text-decoration: none;
+        color: white;
+      }
+      &:visited {
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
 }
