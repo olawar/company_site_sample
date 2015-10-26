@@ -271,14 +271,14 @@ object {
   background-color: white;
 }
 
-.about-more {
+.section-title {
   height: auto;
   margin: 10% 0;
 }
-.about-more h1 {
+.section-title h1 {
   text-align: center;
   background-image: url("../images/aboutTitle.png");
-  height: 6rem;
+  height: 7rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -287,9 +287,9 @@ object {
   font-size: 2.6rem;
   font-family: existencelight, sans-serif;
   color: #676767;
-  padding: 1.5rem;
+  padding: 2rem;
 }
-.about-more h1 span {
+.section-title h1 span {
   color: #9f449b;
 }
 
@@ -314,22 +314,26 @@ object {
   color: #676767;
   line-height: 1.8rem;
 }
-.about-more-flex .about-more-text a {
+
+.click-button {
   width: 13rem;
+  border: none;
   background-color: #9f449b;
   font-size: 1.2rem;
+  font-family: latoregular, sans-serif;
   height: 4rem;
   border-radius: 0.25rem;
   text-align: center;
   padding: 1.1rem;
   box-sizing: border-box;
   box-shadow: inset 0px -15px 0px -5px #6b2e68;
+  color: white;
 }
-.about-more-flex .about-more-text a:link {
+.click-button:link {
   text-decoration: none;
   color: white;
 }
-.about-more-flex .about-more-text a:visited {
+.click-button:visited {
   text-decoration: none;
   color: white;
 }
@@ -364,23 +368,6 @@ object {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-}
-.our-team h1 {
-  text-align: center;
-  background-image: url("../images/aboutTitle.png");
-  height: 6rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  box-sizing: border-box;
-  margin: 6rem;
-  font-size: 2.6rem;
-  font-family: existencelight, sans-serif;
-  color: #676767;
-  padding: 1.5rem;
-}
-.our-team h1 span {
-  color: #9f449b;
 }
 
 .team-arrows {
@@ -438,24 +425,6 @@ ul.team-slider h3 {
 
 .social-icons {
   margin: 0 10%;
-}
-
-.our-skills h1 {
-  text-align: center;
-  background-image: url("../images/aboutTitle.png");
-  height: 6rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  box-sizing: border-box;
-  margin: 6.5rem;
-  font-size: 2.6rem;
-  font-family: existencelight, sans-serif;
-  color: #676767;
-  padding: 1.5rem;
-}
-.our-skills h1 span {
-  color: #9f449b;
 }
 
 .skills-flex {
@@ -545,7 +514,7 @@ ul.team-slider h3 {
   background-color: #eeeeee;
 }
 
-.services-data {
+.services-data-flex {
   display: flex;
   justify-content: center;
   align-content: space-between;
@@ -569,7 +538,7 @@ ul.team-slider h3 {
 }
 
 .services-slider-box {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .services-slider-box object {
   display: block;
@@ -588,17 +557,37 @@ ul.team-slider h3 {
 }
 .services-slider li p:first-of-type {
   color: #676767;
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: lighter;
   margin-bottom: 2rem;
 }
 .services-slider li p:last-of-type {
   color: #676767;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+/*Contact*/
+.contact-flex {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.contact-column {
+  width: 50%;
+  display: block;
+  text-align: start;
+}
+.contact-column form input:not(last-of-type) {
+  height: 3rem;
+  width: 70%;
+  color: black;
+  font-size: 1rem;
+  font-family: latoregular, sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

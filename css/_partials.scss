@@ -256,13 +256,13 @@ object {
   background-color: white;
 }
 
-.about-more {
+.section-title {
   height: auto;
   margin: 10% 0;
   h1{
     text-align: center;
     background-image: url("../images/aboutTitle.png");
-    height: 6rem;
+    height: 7rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -271,7 +271,7 @@ object {
     font-size: 2.6rem;
     font-family: existencelight, sans-serif;
     color: map_get($colors, grayDark);
-    padding: 1.5rem;
+    padding: 2rem;
     span {
       color: map_get($colors, violetDefault);
     }
@@ -297,25 +297,29 @@ object {
       color: map_get($colors, grayDark);
       line-height: 1.8rem;
     }
-    a {
-      width: 13rem;
-      background-color: map_get($colors, violetDefault);
-      font-size: 1.2rem;
-      height: 4rem;
-      border-radius: 0.25rem;
-      text-align: center;
-      padding: 1.1rem;
-      box-sizing: border-box;
-      box-shadow: inset 0px -15px 0px -5px map_get($colors, violetShadow);
-      &:link {
-        text-decoration: none;
-        color: white;
-      }
-      &:visited {
-        text-decoration: none;
-        color: white;
-      }
-    }
+  }
+}
+
+.click-button {
+  width: 13rem;
+  border: none;
+  background-color: map_get($colors, violetDefault);
+  font-size: 1.2rem;
+  font-family: latoregular, sans-serif;
+  height: 4rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  padding: 1.1rem;
+  box-sizing: border-box;
+  box-shadow: inset 0px -15px 0px -5px map_get($colors, violetShadow);
+  color: white;
+  &:link {
+    text-decoration: none;
+    color: white;
+  }
+  &:visited {
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -351,23 +355,6 @@ object {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  h1{
-    text-align: center;
-    background-image: url("../images/aboutTitle.png");
-    height: 6rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    box-sizing: border-box;
-    margin: 6rem;
-    font-size: 2.6rem;
-    font-family: existencelight, sans-serif;
-    color: map_get($colors, grayDark);
-    padding: 1.5rem;
-    span {
-      color: map_get($colors, violetDefault);
-    }
-  }
 }
 
 .team-arrows{
@@ -429,26 +416,6 @@ ul.team-slider {
   margin: 0 10%;
 }
 
-
-.our-skills {
-  h1{
-    text-align: center;
-    background-image: url("../images/aboutTitle.png");
-    height: 6rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    box-sizing: border-box;
-    margin: 6.5rem;
-    font-size: 2.6rem;
-    font-family: existencelight, sans-serif;
-    color: map_get($colors, grayDark);
-    padding: 1.5rem;
-    span {
-      color: map_get($colors, violetDefault);
-    }
-  }
-}
 .skills-flex{
   display: flex;
   justify-content: center;
@@ -549,7 +516,7 @@ ul.team-slider {
   background-color: map_get($colors, grayBackground);
 }
 
-.services-data{
+.services-data-flex {
   display: flex;
   justify-content: center;
   align-content: space-between;
@@ -573,7 +540,7 @@ ul.team-slider {
 }
 
 .services-slider-box {
-  margin-top: 6rem;
+  margin-top: 4rem;
   object {
     display: block;
     margin-left: auto;
@@ -593,18 +560,41 @@ ul.team-slider {
     p {
       &:first-of-type {
         color: map_get($colors, grayDark);
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
         font-weight: lighter;
         margin-bottom: 2rem;
       }
       &:last-of-type {
         color: map_get($colors, grayDark);
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
         font-weight: lighter;
         text-transform: uppercase;
       }
+    }
+  }
+}
+
+/*Contact*/
+
+.contact-flex {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.contact-column {
+  width: 50%;
+  display: block;
+  text-align: start;
+  form {
+    input:not(last-of-type) {
+      height: 3rem;
+      width: 70%;
+      color: black;
+      font-size: 1rem;
+      font-family: latoregular, sans-serif;
     }
   }
 }
