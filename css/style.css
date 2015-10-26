@@ -576,18 +576,65 @@ ul.team-slider h3 {
   justify-content: center;
   align-content: space-between;
 }
+.contact-flex p {
+  padding: 0 4rem 0 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.4rem;
+}
+.contact-flex p:nth-child(n+2) {
+  font-weight: bold;
+}
+
+.contact-icons li {
+  display: inline-block;
+}
+.contact-icons li img {
+  height: 3rem;
+  width: auto;
+  margin-left: 1rem;
+}
 
 .contact-column {
   width: 50%;
   display: block;
   text-align: start;
+  padding-left: 0.5rem;
+  margin-bottom: 2rem;
 }
-.contact-column form input:not(last-of-type) {
+.contact-column form input:nth-child(-n+2) {
   height: 3rem;
-  width: 70%;
+  width: 95%;
   color: black;
   font-size: 1rem;
   font-family: latoregular, sans-serif;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.contact-column form textarea {
+  height: 9rem;
+  width: 95%;
+  color: black;
+  font-size: 1rem;
+  font-family: latoregular, sans-serif;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.footer {
+  text-align: center;
+}
+.footer p {
+  font-size: 4rem;
+  margin: 6rem 0;
+  color: #676767;
+  font-family: existencelight, sans-serif;
+}
+.footer p span {
+  color: #9f449b;
 }
 
 /*# sourceMappingURL=style.css.map */
