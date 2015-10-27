@@ -273,11 +273,11 @@ object {
 .about-flex {
   display: flex;
   flex-direction: row;
-  height: 45rem;
+  height: auto;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
-  align-items: center;
+  align-items: flex-start;
   @include smartphone {
     flex-wrap: wrap;
   }
@@ -290,14 +290,14 @@ object {
 }
 
 .about-item-flex {
-  order: 0;
-  flex: 1 1 auto;
-  align-self: center;
+  width: 25%;
+  align-self: flex-start;
   text-align: center;
   vertical-align: middle;
-  padding: 2%;
+  padding: 1%;
   box-sizing: border-box;
   font-family: latoregular, sans-serif;
+  margin: 10rem 0;
   @include smartphone {
     width: 50%;
   }
@@ -310,7 +310,7 @@ object {
   h2 {
     color: map_get($colors, grayDark);
     font-weight: lighter;
-    margin: 2rem;
+    margin: 2rem 0;
   }
   p {
     color: map_get($colors, grayDark);

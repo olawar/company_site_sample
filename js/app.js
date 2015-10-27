@@ -1,7 +1,4 @@
-/**
- * Created by Awar on 2015-10-22.
- */
-//$(function(){
+$(function(){
 
 var Application = function(){
         function init(){
@@ -18,9 +15,23 @@ var Application = function(){
 
     var app = new Application();
     app.init();
-app.scrollPage();
+    app.scrollPage();
 
 
+    var menu = $("nav.sticky-nav");
+    var lastPositionTop = 0;
+    var menuHeight = menu.height();
+    var paragraphs = $("p");
+    var links = $(".nav a");
 
+    $(window).on("scroll", function(){
+        if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
+            lastPositionTop = menu.offset().top;
+            menu.addClass("sticky");
+        }
+        if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
+            menu.removeClass("sticky");
+        }
+    });
 
-//});
+});

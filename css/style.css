@@ -318,11 +318,11 @@ object {
 .about-flex {
   display: flex;
   flex-direction: row;
-  height: 45rem;
+  height: auto;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: stretch;
-  align-items: center;
+  align-items: flex-start;
 }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .about-flex {
@@ -341,14 +341,14 @@ object {
 }
 
 .about-item-flex {
-  order: 0;
-  flex: 1 1 auto;
-  align-self: center;
+  width: 25%;
+  align-self: flex-start;
   text-align: center;
   vertical-align: middle;
-  padding: 2%;
+  padding: 1%;
   box-sizing: border-box;
   font-family: latoregular, sans-serif;
+  margin: 10rem 0;
 }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .about-item-flex {
@@ -368,7 +368,7 @@ object {
 .about-item-flex h2 {
   color: #676767;
   font-weight: lighter;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 .about-item-flex p {
   color: #676767;
