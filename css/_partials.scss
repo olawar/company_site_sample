@@ -300,12 +300,15 @@ object {
   margin: 10rem 0;
   @include smartphone {
     width: 50%;
+    margin: 2rem;
   }
   @include tablet {
     width: 50%;
+    margin: 2rem;
   }
   @include tablet-portrait {
     width: 50%;
+    margin: 2rem;
   }
   h2 {
     color: map_get($colors, grayDark);
@@ -393,14 +396,20 @@ object {
     width: 40%;
     @include tablet {
       width: 60%;
+      margin: 2rem 0;
     }
     @include tablet-portrait {
       width: 60%;
+      margin: 2rem 0;
+    }
+    @include smartphone {
+      margin: 2rem 0;
     }
     p {
       font-size: 1rem;
       color: map_get($colors, grayDark);
       line-height: 1.8rem;
+      margin-bottom: 1rem;
     }
   }
 }

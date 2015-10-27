@@ -353,16 +353,19 @@ object {
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .about-item-flex {
     width: 50%;
+    margin: 2rem;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .about-item-flex {
     width: 50%;
+    margin: 2rem;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .about-item-flex {
     width: 50%;
+    margin: 2rem;
   }
 }
 .about-item-flex h2 {
@@ -465,17 +468,25 @@ object {
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .about-more-flex .about-more-text {
     width: 60%;
+    margin: 2rem 0;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .about-more-flex .about-more-text {
     width: 60%;
+    margin: 2rem 0;
+  }
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .about-more-flex .about-more-text {
+    margin: 2rem 0;
   }
 }
 .about-more-flex .about-more-text p {
   font-size: 1rem;
   color: #676767;
   line-height: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .click-button {
