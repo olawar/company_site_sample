@@ -267,7 +267,7 @@ object {
     background-position: center;
     background-size: contain;
     box-sizing: border-box;
-    margin: 6rem;
+    margin: 4rem;
     font-size: 2.6rem;
     font-family: existencelight, sans-serif;
     color: map_get($colors, grayDark);
@@ -578,29 +578,60 @@ ul.team-slider {
 
 /*Portfolio*/
 
+.portfolio-nav {
+  margin-bottom: 4rem;
+  text-align: center;
+  li {
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid black;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 0.25rem;
+    background-color: white;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    text-align: center;
+    &:hover {
+      background-color: map_get($colors, violetDefault);
+      border: 1px solid map_get($colors, violetDefault);
+      color: white;
+    }
+  }
+}
+
 .portfolio-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .portfolio-item {
-  width: 30%;
-  height: 30%;
+  width: 33%;
+  height: auto;
+  text-align: center;
   h2 {
     color: black;
     font-size: 1rem;
+    margin-top: 1rem;
   }
   p {
     color: map_get($colors, grayLight);
     font-size: 0.75rem;
+    margin: 1rem;
   }
 }
 
 .image-item {
-  width: 80%;
-  height: 80%;
+  width: 19rem;
+  height: 19rem;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 /*Contact*/
@@ -610,7 +641,7 @@ ul.team-slider {
   justify-content: center;
   align-content: space-between;
   p {
-    padding: 0 4rem 0 1rem;
+    padding: 0 1rem;
     box-sizing: border-box;
     font-size: 1rem;
     line-height: 1.25rem;
