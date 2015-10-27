@@ -570,6 +570,32 @@ ul.team-slider h3 {
   text-transform: uppercase;
 }
 
+/*Portfolio*/
+.portfolio-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: 30%;
+  height: 30%;
+}
+.portfolio-item h2 {
+  color: black;
+  font-size: 1rem;
+}
+.portfolio-item p {
+  color: #ccd0d2;
+  font-size: 0.75rem;
+}
+
+.image-item {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+
 /*Contact*/
 .contact-flex {
   display: flex;

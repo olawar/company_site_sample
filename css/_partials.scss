@@ -576,6 +576,33 @@ ul.team-slider {
   }
 }
 
+/*Portfolio*/
+
+.portfolio-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: 30%;
+  height: 30%;
+  h2 {
+    color: black;
+    font-size: 1rem;
+  }
+  p {
+    color: map_get($colors, grayLight);
+    font-size: 0.75rem;
+  }
+}
+
+.image-item {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+
 /*Contact*/
 
 .contact-flex {
