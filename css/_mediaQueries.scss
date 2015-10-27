@@ -1,0 +1,26 @@
+$smartphone-width: 767px;
+
+$tablet-width: 1024px;
+
+$tablet-portrait-width: 980px;
+
+
+@mixin smartphone {
+  @media screen and (max-width: #{$smartphone-width}) and (orientation: portrait){
+    @content;
+  }
+}
+
+
+@mixin tablet-portrait {
+  @media screen and (min-width: #{$smartphone-width}) and (max-width: #{$tablet-portrait-width})and(orientation: portrait) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width})and(orientation: landscape) {
+    @content;
+  }
+}

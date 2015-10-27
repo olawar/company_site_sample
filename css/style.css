@@ -64,6 +64,21 @@ html {
   font-size: 18px;
   font-family: latoregular, sans-serif;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  html {
+    font-size: 12px;
+  }
+}
 
 .company-page {
   padding: 0;
@@ -81,6 +96,21 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .container-content {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .container-content {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .container-content {
+    width: 90%;
+  }
+}
 
 /*home page*/
 .introduction {
@@ -91,12 +121,38 @@ html {
   height: 0;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .introduction {
+    min-height: 640px;
+    width: auto;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .introduction {
+    min-height: 980px;
+    width: auto;
+    background-size: cover;
+  }
+}
 
 .introduction-text {
   padding: 10% 0;
   text-align: center;
   vertical-align: middle;
   font-family: existencelight, sans-serif;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .introduction-text {
+    padding-top: 20rem;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .introduction-text {
+    padding-top: 30rem;
+    box-sizing: border-box;
+  }
 }
 .introduction-text h1 {
   font-size: 5rem;
@@ -126,10 +182,31 @@ html {
   height: 34rem;
   color: white;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .introduction-icons {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .introduction-icons {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .introduction-icons {
+    height: 26rem;
+  }
+}
 
 object {
   height: 10rem;
   width: 10rem;
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  object {
+    height: 8rem;
+    width: 8rem;
+  }
 }
 
 .introduction-icons-flex:nth-child(1) {
@@ -178,6 +255,11 @@ object {
   width: 100%;
   height: 7rem;
   background-color: white;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .sticky-nav {
+    display: none;
+  }
 }
 
 .nav-flex {
@@ -242,6 +324,21 @@ object {
   align-content: stretch;
   align-items: center;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .about-flex {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .about-flex {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .about-flex {
+    flex-wrap: wrap;
+  }
+}
 
 .about-item-flex {
   order: 0;
@@ -253,16 +350,53 @@ object {
   box-sizing: border-box;
   font-family: latoregular, sans-serif;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .about-item-flex {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .about-item-flex {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .about-item-flex {
+    width: 50%;
+  }
+}
 .about-item-flex h2 {
   color: #676767;
   font-weight: lighter;
-  margin: 20% 0;
+  margin: 2rem;
 }
 .about-item-flex p {
   color: #676767;
   font-weight: lighter;
   font-size: 0.8rem;
   line-height: 1.4rem;
+}
+.about-item-flex object {
+  width: 70%;
+  height: 70%;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .about-item-flex object {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .about-item-flex object {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .about-item-flex object {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 .about-us-more {
@@ -297,17 +431,46 @@ object {
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .about-more-flex {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+}
 .about-more-flex img {
   width: 60%;
-  height: auto;
+  height: 60%;
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .about-more-flex img {
+    width: 40%;
+    height: 40%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .about-more-flex img {
+    width: 40%;
+    height: 40%;
+  }
 }
 .about-more-flex .about-more-text {
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: latoregular, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .about-more-flex .about-more-text {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .about-more-flex .about-more-text {
+    width: 60%;
+  }
 }
 .about-more-flex .about-more-text p {
   font-size: 1rem;
@@ -402,6 +565,8 @@ object {
   -ms-flex-item-align: center;
   align-self: center;
   margin-bottom: 6rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 ul.team-slider li {
@@ -410,6 +575,24 @@ ul.team-slider li {
   width: 30%;
   box-sizing: border-box;
   margin: 1.4%;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  ul.team-slider li {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  ul.team-slider li {
+    width: 100%;
+    display: block;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  ul.team-slider li {
+    width: 100%;
+    display: block;
+  }
 }
 ul.team-slider h2 {
   text-transform: uppercase;
@@ -422,9 +605,34 @@ ul.team-slider h3 {
   color: #ccd0d2;
   font-size: 1rem;
 }
+ul.team-slider img.person-photo {
+  width: 70%;
+  height: 70%;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  ul.team-slider img.person-photo {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  ul.team-slider img.person-photo {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  ul.team-slider img.person-photo {
+    width: 30%;
+    height: 30%;
+  }
+}
 
-.social-icons {
+ul.social-icons {
   margin: 0 10%;
+}
+ul.social-icons li {
+  display: inline-block;
 }
 
 .skills-flex {
@@ -433,16 +641,32 @@ ul.team-slider h3 {
   align-content: space-between;
   margin-bottom: 6rem;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .skills-flex {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+}
 
 .skills-column {
   width: 20rem;
-  align-content: center;
 }
 .skills-column:first-child {
   margin-right: 10%;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .skills-column:first-child {
+    margin-right: 0;
+  }
+}
 .skills-column:last-child {
   margin-left: 10%;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .skills-column:last-child {
+    margin-left: 0;
+  }
 }
 
 .bar {
@@ -549,11 +773,31 @@ ul.team-slider h3 {
 .services-slider li {
   text-align: center;
 }
-.services-slider li img {
+.services-slider li img.client-photo {
   display: block;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 2rem;
+  width: 20%;
+  height: 20%;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .services-slider li img.client-photo {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .services-slider li img.client-photo {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .services-slider li img.client-photo {
+    width: 30%;
+    height: 30%;
+  }
 }
 .services-slider li p:first-of-type {
   color: #676767;
@@ -607,6 +851,21 @@ ul.team-slider h3 {
   height: auto;
   text-align: center;
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .portfolio-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .portfolio-item {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .portfolio-item {
+    width: 50%;
+  }
+}
 .portfolio-item h2 {
   color: black;
   font-size: 1rem;
@@ -619,12 +878,24 @@ ul.team-slider h3 {
 }
 
 .image-item {
-  width: 19rem;
-  height: 19rem;
+  width: 18rem;
+  height: 18rem;
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
   display: block;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .image-item {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .image-item {
+    width: 16rem;
+    height: 16rem;
+  }
 }
 
 /*Contact*/
@@ -632,6 +903,20 @@ ul.team-slider h3 {
   display: flex;
   justify-content: center;
   align-content: space-between;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .contact-flex {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .contact-flex {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
 }
 .contact-flex p {
   padding: 0 1rem;
@@ -659,6 +944,16 @@ ul.team-slider h3 {
   text-align: start;
   padding-left: 0.5rem;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  .contact-column {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .contact-column {
+    width: 80%;
+  }
 }
 .contact-column form input:nth-child(-n+2) {
   height: 3rem;
