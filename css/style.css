@@ -160,9 +160,24 @@ html {
 .arrow-down {
   position: absolute;
   left: 45%;
-  top: 80%;
+  top: 75%;
   width: 10%;
   height: auto;
+}
+@media screen and (max-width: 767px) {
+  .arrow-down {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .arrow-down {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .arrow-down {
+    display: none;
+  }
 }
 
 .introduction-text {
@@ -360,6 +375,7 @@ object {
 .sticky {
   position: fixed;
   top: 0;
+  z-index: 99999999;
 }
 
 .active a {
@@ -844,6 +860,7 @@ ul.social-icons img {
 .services {
   width: 100%;
   height: auto;
+  padding: 10rem 0;
   background-color: #eeeeee;
 }
 
@@ -856,7 +873,6 @@ ul.social-icons img {
 .data-column {
   width: 25%;
   display: block;
-  padding-top: 6rem;
   text-align: center;
 }
 .data-column h2 {
@@ -867,7 +883,7 @@ ul.social-icons img {
 .data-column p {
   font-size: 1rem;
   color: #676767;
-  padding-top: 1rem;
+  padding: 1rem 2rem 0 2rem;
 }
 
 .services-slider-box {

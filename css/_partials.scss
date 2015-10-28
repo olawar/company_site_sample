@@ -80,9 +80,18 @@ html{
 .arrow-down {
   position: absolute;
   left: 45%;
-  top: 80%;
+  top: 75%;
   width: 10%;
   height: auto;
+  @include smartphone {
+    display: none;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include tablet-portrait {
+    display: none;
+  }
 }
 
 //dla Firefoxa do mixinu: background-size:cover; padding-bottom: 0; i ¿adnej wysokoœci
@@ -263,6 +272,7 @@ object {
 .sticky{
   position: fixed;
   top: 0;
+  z-index: 99999999;
 }
 
 .active a {
@@ -742,6 +752,7 @@ ul.social-icons {
 .services {
   width: 100%;
   height: auto;
+  padding: 10rem 0;
   background-color: map_get($colors, grayBackground);
 }
 
@@ -754,7 +765,6 @@ ul.social-icons {
 .data-column {
   width: 25%;
   display: block;
-  padding-top: 6rem;
   text-align: center;
   h2{
     color: black;
@@ -764,7 +774,7 @@ ul.social-icons {
   p {
     font-size: 1rem;
     color: map_get($colors, grayDark);
-    padding-top: 1rem;
+    padding: 1rem 2rem 0 2rem;
   }
 }
 

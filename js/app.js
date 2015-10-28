@@ -67,4 +67,8 @@ $(function(){
     app.scrollButton();
     app.scrollingMenuFeatures();
 
+
+        $('.bxslider').bxSlider();
+
+
 });
