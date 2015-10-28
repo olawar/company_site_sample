@@ -28,6 +28,16 @@ var Application = function(){
             $(this).find(hoveringItems).removeClass("hover-enter").addClass("hover-layer");
         });
     }
+    function morePortfolio() {
+        $(".portfolio-button").on("click", function(){
+            $(".no-display").removeClass("no-display");
+        });
+
+        $(".portfolio-less-button").on("click", function(){
+            $("div.portfolio-item:nth-child(n+7)").addClass("no-display");
+            $(".portfolio-less-button").addClass("no-display");
+        });
+    }
 
     function scrollingMenuFeatures(){
 
@@ -72,6 +82,7 @@ var Application = function(){
         scrollButton:scrollButton,
         bxSlider:bxSlider,
         portfolioHover:portfolioHover,
+        morePortfolio:morePortfolio,
         scrollingMenuFeatures:scrollingMenuFeatures
     }
 };
@@ -85,6 +96,7 @@ $(function(){
     app.scrollButton();
     app.bxSlider();
     app.portfolioHover();
+    app.morePortfolio();
     app.scrollingMenuFeatures();
 
 

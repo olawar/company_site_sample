@@ -1063,8 +1063,13 @@ ul.social-icons img {
   }
 }
 
+.no-display {
+  display: none;
+}
+
+.portfolio-less-button,
 .portfolio-button {
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 img.hover-layer {
