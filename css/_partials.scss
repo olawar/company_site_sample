@@ -1,6 +1,5 @@
 html{
-  font-size: 18px;
-  //mixin dla Firefoxa i IE na 16px
+  font-size: 16px;
   font-family: latoregular, sans-serif;
   @include smartphone {
     font-size: 10px;
@@ -9,6 +8,9 @@ html{
     font-size: 12px;
   }
   @include tablet-portrait {
+    font-size: 12px;
+  }
+  @include lower {
     font-size: 12px;
   }
 }
@@ -53,11 +55,20 @@ html{
     min-height: 640px;
     width: auto;
     background-size: cover;
+    box-sizing: border-box;
   }
   @include tablet-portrait {
     min-height: 980px;
+    box-sizing: border-box;
     width: auto;
     background-size: cover;
+  }
+  @include ipad{
+    min-height: 768px;
+    box-sizing: border-box;
+    width: auto;
+    background-size: auto;
+    overflow: hidden;
   }
 }
 
@@ -73,7 +84,11 @@ html{
     box-sizing: border-box;
   }
   @include tablet-portrait {
-    padding-top: 30rem;
+    padding-top: 20rem;
+    box-sizing: border-box;
+  }
+  @include ipad{
+    padding-top: 20rem;
     box-sizing: border-box;
   }
   h1 {
@@ -107,11 +122,11 @@ html{
   @include smartphone {
     display: none;
   }
-  @include tablet-portrait {
+  @include tablet {
     display: none;
   }
-  @include tablet {
-    height: 26rem;
+  @include tablet-portrait {
+    display: none;
   }
 }
 
@@ -193,7 +208,6 @@ object {
     order: 0;
     flex: 1 1 auto;
     align-self: flex-end;
-    //padding: 2% 0;
     }
   }
 
@@ -201,6 +215,13 @@ object {
   text-transform: uppercase;
   color: map_get($colors, grayDark);
   font-size: 1rem;
+  a {
+    text-decoration: none;
+    color: map_get($colors, grayDark);
+    &:hover {
+      color: map_get($colors, violetDefault);
+    }
+  }
 }
 
 .company-logo2 {
@@ -208,7 +229,7 @@ object {
   font-size: 1.6rem;
   font-weight: bold;
   color: map_get($colors, grayDark);
-  width: 27rem;
+  width: 35%;
   span {
     color: map_get($colors, violetDefault);
   }
@@ -221,7 +242,7 @@ object {
   top: 0;
 }
 
-.active {
+.active a {
   color: map_get($colors, violetDefault);
 }
 
@@ -508,12 +529,20 @@ object {
 }
 
 ul.team-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  @include smartphone {
+    flex-direction: column;
+  }
+  @include tablet-portrait {
+    flex-direction: column;
+  }
   li {
-    display: inline-block;
     text-align: center;
-    width: 30%;
+    width: 33%;
     box-sizing: border-box;
-    margin: 1.4%;
+    padding: 1rem;
     @include smartphone {
       width: 100%;
       display: block;
@@ -558,8 +587,28 @@ ul.team-slider {
 
 ul.social-icons {
   margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   li {
-    display: inline-block;
+    width: 50%;
+  }
+  img {
+    height: 60%;
+    width: 60%;
+    @include smartphone {
+      width: 30%;
+      height: 30%;
+    }
+    @include tablet {
+      width: 30%;
+      height: 30%;
+    }
+    @include tablet-portrait {
+      width: 30%;
+      height: 30%;
+    }
   }
 }
 
@@ -901,6 +950,7 @@ ul.social-icons {
 
 .footer {
   text-align: center;
+  margin-bottom: 20rem;
     p {
       font-size: 4rem;
       margin: 6rem 0;

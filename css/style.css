@@ -61,10 +61,10 @@ table {
   font-style: normal;
 }
 html {
-  font-size: 18px;
+  font-size: 16px;
   font-family: latoregular, sans-serif;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   html {
     font-size: 10px;
   }
@@ -75,6 +75,11 @@ html {
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 980px) {
   html {
     font-size: 12px;
   }
@@ -96,7 +101,7 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .container-content {
     width: 90%;
   }
@@ -121,18 +126,29 @@ html {
   height: 0;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .introduction {
     min-height: 640px;
     width: auto;
     background-size: cover;
+    box-sizing: border-box;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .introduction {
     min-height: 980px;
+    box-sizing: border-box;
     width: auto;
     background-size: cover;
+  }
+}
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .introduction {
+    min-height: 768px;
+    box-sizing: border-box;
+    width: auto;
+    background-size: auto;
+    overflow: hidden;
   }
 }
 
@@ -142,7 +158,7 @@ html {
   vertical-align: middle;
   font-family: existencelight, sans-serif;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .introduction-text {
     padding-top: 20rem;
     box-sizing: border-box;
@@ -150,7 +166,13 @@ html {
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .introduction-text {
-    padding-top: 30rem;
+    padding-top: 20rem;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-height: 768px) and (orientation: landscape) {
+  .introduction-text {
+    padding-top: 20rem;
     box-sizing: border-box;
   }
 }
@@ -182,7 +204,12 @@ html {
   height: 34rem;
   color: white;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
+  .introduction-icons {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .introduction-icons {
     display: none;
   }
@@ -190,11 +217,6 @@ html {
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .introduction-icons {
     display: none;
-  }
-}
-@media screen and (max-width: 1024px) and (orientation: landscape) {
-  .introduction-icons {
-    height: 26rem;
   }
 }
 
@@ -256,7 +278,7 @@ object {
   height: 7rem;
   background-color: white;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .sticky-nav {
     display: none;
   }
@@ -286,13 +308,20 @@ object {
   color: #676767;
   font-size: 1rem;
 }
+.nav-item a {
+  text-decoration: none;
+  color: #676767;
+}
+.nav-item a:hover {
+  color: #9f449b;
+}
 
 .company-logo2 {
   font-family: existencelight, sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   color: #676767;
-  width: 27rem;
+  width: 35%;
 }
 .company-logo2 span {
   color: #9f449b;
@@ -304,7 +333,7 @@ object {
   top: 0;
 }
 
-.active {
+.active a {
   color: #9f449b;
 }
 
@@ -324,7 +353,7 @@ object {
   align-content: stretch;
   align-items: flex-start;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .about-flex {
     flex-wrap: wrap;
   }
@@ -350,7 +379,7 @@ object {
   font-family: latoregular, sans-serif;
   margin: 10rem 0;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .about-item-flex {
     width: 50%;
     margin: 2rem;
@@ -383,7 +412,7 @@ object {
   width: 70%;
   height: 70%;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .about-item-flex object {
     width: 30%;
     height: 30%;
@@ -434,7 +463,7 @@ object {
   display: flex;
   flex-direction: row;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .about-more-flex {
     flex-direction: column;
     align-content: center;
@@ -477,7 +506,7 @@ object {
     margin: 2rem 0;
   }
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .about-more-flex .about-more-text {
     margin: 2rem 0;
   }
@@ -580,14 +609,28 @@ object {
   height: 3rem;
 }
 
-ul.team-slider li {
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-  box-sizing: border-box;
-  margin: 1.4%;
+ul.team-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
+  ul.team-slider {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  ul.team-slider {
+    flex-direction: column;
+  }
+}
+ul.team-slider li {
+  text-align: center;
+  width: 33%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+@media screen and (max-width: 767px) {
   ul.team-slider li {
     width: 100%;
     display: block;
@@ -620,7 +663,7 @@ ul.team-slider img.person-photo {
   width: 70%;
   height: 70%;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   ul.team-slider img.person-photo {
     width: 50%;
     height: 50%;
@@ -641,9 +684,35 @@ ul.team-slider img.person-photo {
 
 ul.social-icons {
   margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 ul.social-icons li {
-  display: inline-block;
+  width: 50%;
+}
+ul.social-icons img {
+  height: 60%;
+  width: 60%;
+}
+@media screen and (max-width: 767px) {
+  ul.social-icons img {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  ul.social-icons img {
+    width: 30%;
+    height: 30%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  ul.social-icons img {
+    width: 30%;
+    height: 30%;
+  }
 }
 
 .skills-flex {
@@ -652,7 +721,7 @@ ul.social-icons li {
   align-content: space-between;
   margin-bottom: 6rem;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .skills-flex {
     flex-direction: column;
     align-content: center;
@@ -666,7 +735,7 @@ ul.social-icons li {
 .skills-column:first-child {
   margin-right: 10%;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .skills-column:first-child {
     margin-right: 0;
   }
@@ -674,7 +743,7 @@ ul.social-icons li {
 .skills-column:last-child {
   margin-left: 10%;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .skills-column:last-child {
     margin-left: 0;
   }
@@ -792,7 +861,7 @@ ul.social-icons li {
   width: 20%;
   height: 20%;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .services-slider li img.client-photo {
     width: 30%;
     height: 30%;
@@ -862,7 +931,7 @@ ul.social-icons li {
   height: auto;
   text-align: center;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .portfolio-item {
     width: 50%;
   }
@@ -896,7 +965,7 @@ ul.social-icons li {
   margin-left: auto;
   display: block;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .image-item {
     width: 12rem;
     height: 12rem;
@@ -915,7 +984,7 @@ ul.social-icons li {
   justify-content: center;
   align-content: space-between;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .contact-flex {
     flex-direction: column;
     align-items: center;
@@ -956,7 +1025,7 @@ ul.social-icons li {
   padding-left: 0.5rem;
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px) {
   .contact-column {
     width: 80%;
   }
@@ -989,6 +1058,7 @@ ul.social-icons li {
 
 .footer {
   text-align: center;
+  margin-bottom: 20rem;
 }
 .footer p {
   font-size: 4rem;

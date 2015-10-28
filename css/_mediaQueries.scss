@@ -4,13 +4,21 @@ $tablet-width: 1024px;
 
 $tablet-portrait-width: 980px;
 
+$ipad-width: 768px;
 
-@mixin smartphone {
-  @media screen and (max-width: #{$smartphone-width}) and (orientation: portrait){
+$lowres-width: 980px;
+
+@mixin lower {
+  @media (max-width: #{$lowres-width}){
     @content;
   }
 }
 
+@mixin smartphone {
+  @media screen and (max-width: #{$smartphone-width}) {
+    @content;
+  }
+}
 
 @mixin tablet-portrait {
   @media screen and (min-width: #{$smartphone-width}) and (max-width: #{$tablet-portrait-width})and(orientation: portrait) {
@@ -21,6 +29,12 @@ $tablet-portrait-width: 980px;
 
 @mixin tablet {
   @media screen and (max-width: #{$tablet-width})and(orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media screen and (max-height: #{$ipad-width})and(orientation: landscape) {
     @content;
   }
 }
