@@ -7,6 +7,12 @@ var Application = function(){
     function scrollPage(){
         console.log("scrolling");
     }
+    function scrollButton(){
+        $("img.arrow-down").on("click", function(){
+            $('html, body').animate({scrollTop: ($(".sticky-nav").offset().top)}, 800);
+        });
+    }
+
     function scrollingMenuFeatures(){
 
         var menu = $("nav.sticky-nav");
@@ -47,6 +53,7 @@ var Application = function(){
     return{
         init:init,
         scrollPage:scrollPage,
+        scrollButton:scrollButton,
         scrollingMenuFeatures:scrollingMenuFeatures
     }
 };
@@ -57,6 +64,7 @@ $(function(){
     var app = new Application();
     app.init();
     app.scrollPage();
+    app.scrollButton();
     app.scrollingMenuFeatures();
 
 });
