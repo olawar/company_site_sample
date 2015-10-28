@@ -942,9 +942,34 @@ ul.social-icons {
   }
 }
 
+.portfolio-button {
+  margin: 2rem 0;
+}
+
 img.hover-layer {
+  display: none;
+}
+
+img.hover-enter {
+  display: block;
   position: absolute;
+  width: 18rem;
+  height: 18rem;
+  top: 0;
+  left: 0;
   z-index: 10;
+  @include smartphone {
+    width: 12rem;
+    height: 12rem;
+  }
+  @include tablet-portrait {
+    width: 16rem;
+    height: 16rem;
+  }
+  @include lower {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 
 /*Contact*/

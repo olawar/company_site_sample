@@ -12,6 +12,22 @@ var Application = function(){
             $('html, body').animate({scrollTop: ($(".sticky-nav").offset().top)}, 800);
         });
     }
+    function bxSlider() {
+        $('.bxslider').bxSlider();
+    }
+    function portfolioHover() {
+
+        var itemsToHover = $(".portfolio-item");
+        var hoveringItems = $("img.hover-layer");
+
+        itemsToHover.on("mouseenter", function(){
+            $(this).find(hoveringItems).addClass("hover-enter").removeClass("hover-layer");
+        });
+
+        itemsToHover.on("mouseleave", function(){
+            $(this).find(hoveringItems).removeClass("hover-enter").addClass("hover-layer");
+        });
+    }
 
     function scrollingMenuFeatures(){
 
@@ -54,6 +70,8 @@ var Application = function(){
         init:init,
         scrollPage:scrollPage,
         scrollButton:scrollButton,
+        bxSlider:bxSlider,
+        portfolioHover:portfolioHover,
         scrollingMenuFeatures:scrollingMenuFeatures
     }
 };
@@ -65,10 +83,12 @@ $(function(){
     app.init();
     app.scrollPage();
     app.scrollButton();
+    app.bxSlider();
+    app.portfolioHover();
     app.scrollingMenuFeatures();
 
 
-        $('.bxslider').bxSlider();
+
 
 
 });

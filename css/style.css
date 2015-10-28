@@ -1063,9 +1063,40 @@ ul.social-icons img {
   }
 }
 
+.portfolio-button {
+  margin: 2rem 0;
+}
+
 img.hover-layer {
+  display: none;
+}
+
+img.hover-enter {
+  display: block;
   position: absolute;
+  width: 18rem;
+  height: 18rem;
+  top: 0;
+  left: 0;
   z-index: 10;
+}
+@media screen and (max-width: 767px) {
+  img.hover-enter {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  img.hover-enter {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+@media (max-width: 1300px) {
+  img.hover-enter {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 
 /*Contact*/
