@@ -8,7 +8,7 @@ var Application = function(){
         console.log("scrolling");
     }
     function scrollButton(){
-        $("img.arrow-down").on("click", function(){
+        $("svg.arrow-down").on("click", function(){
             $('html, body').animate({scrollTop: ($(".sticky-nav").offset().top)}, 800);
         });
     }

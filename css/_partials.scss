@@ -155,7 +155,7 @@ html{
   }
 }
 
-object {
+svg {
   height: 10rem;
   width: 10rem;
   @include tablet {
@@ -166,6 +166,39 @@ object {
     height: 6rem;
     width: 6rem;
   }
+}
+
+.cls-1, .cls-2, .cls-4 {
+  fill: #fff;
+}
+
+.cls-1 {
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 0.1;
+}
+
+.cls-1:hover,
+.cls-2:hover {
+  stroke: #9f449b;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  fill-opacity: 1;
+  fill: #9f449b;
+}
+
+.cls-1, .cls-2 {
+  fill-rule: evenodd;
+}
+
+.cls-3, .cls-4 {
+  font-size: 18px;
+}
+
+.cls-4 {
+  text-anchor: middle;
+  font-family: latoregular, sans-serif;
 }
 
 .introduction-icons-flex:nth-child(1) {
@@ -894,6 +927,7 @@ ul.social-icons {
   margin-right: auto;
   margin-left: auto;
   display: block;
+  position: relative;
   @include smartphone {
     width: 12rem;
     height: 12rem;
@@ -906,6 +940,11 @@ ul.social-icons {
     width: 12rem;
     height: 12rem;
   }
+}
+
+img.hover-layer {
+  position: absolute;
+  z-index: 10;
 }
 
 /*Contact*/
