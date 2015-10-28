@@ -10,9 +10,6 @@ html{
   @include tablet-portrait {
     font-size: 12px;
   }
-  @include lower {
-    font-size: 12px;
-  }
 }
 
 .company-page {
@@ -128,6 +125,9 @@ html{
   @include tablet-portrait {
     display: none;
   }
+  @include lower {
+    height: 20rem;
+  }
 }
 
 object {
@@ -136,6 +136,10 @@ object {
   @include tablet {
     height: 8rem;
     width: 8rem;
+  }
+  @include lower {
+    height: 6rem;
+    width: 6rem;
   }
 }
 
@@ -221,6 +225,9 @@ object {
     &:hover {
       color: map_get($colors, violetDefault);
     }
+  }
+  @include lower {
+    font-size: 0.7rem;
   }
 }
 
@@ -868,6 +875,10 @@ ul.social-icons {
   @include tablet-portrait {
     width: 16rem;
     height: 16rem;
+  }
+  @include lower {
+    width: 12rem;
+    height: 12rem;
   }
 }
 

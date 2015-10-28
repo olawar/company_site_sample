@@ -6,10 +6,10 @@ $tablet-portrait-width: 980px;
 
 $ipad-width: 768px;
 
-$lowres-width: 980px;
+$lower-width: 1300px;
 
 @mixin lower {
-  @media (max-width: #{$lowres-width}){
+  @media (max-width: #{$lower-width}){
     @content;
   }
 }

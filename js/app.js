@@ -7,7 +7,7 @@ var Application = function(){
     function scrollPage(){
         console.log("scrolling");
     }
-    function scrollingFeatures(){
+    function scrollingMenuFeatures(){
 
         var menu = $("nav.sticky-nav");
         var lastPositionTop = 0;
@@ -47,7 +47,7 @@ var Application = function(){
     return{
         init:init,
         scrollPage:scrollPage,
-        scrollingFeatures:scrollingFeatures
+        scrollingMenuFeatures:scrollingMenuFeatures
     }
 };
 
@@ -57,6 +57,6 @@ $(function(){
     var app = new Application();
     app.init();
     app.scrollPage();
-    app.scrollingFeatures();
+    app.scrollingMenuFeatures();
 
 });
