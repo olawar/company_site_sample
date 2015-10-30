@@ -1,21 +1,60 @@
 
 
 var Application = function(){
-    function init(){
-        console.log("init");
-    }
-    function scrollPage(){
-        console.log("scrolling");
-    }
     function scrollButton(){
+
+        //function for scrolling to the next section from the main menu
+
         $("svg.arrow-down").on("click", function(){
             $('html, body').animate({scrollTop: ($(".sticky-nav").offset().top)}, 800);
         });
     }
+    function sliderThree() {
+
+        var images = $(".team-slider li");
+        var visibleImage=0;
+        var arrowRight = $("#arrow-right");
+        var arrowLeft = $("#arrow-left");
+
+        //displaying the first three elements
+
+        for(visibleImage = 0; visibleImage <=2; visibleImage++) {
+            images.eq(visibleImage).show();
+        }
+
+        visibleImage=0;
+
+        //function for sliding images of team members, showing 3 people at a time
+
+        arrowRight.click(function(){
+            console.log("klikam");
+            arrowLeft.removeClass("no-display");
+            images.eq(visibleImage).hide();
+            visibleImage++;
+            if((visibleImage+2) >= (images.length)){
+                arrowRight.addClass("no-display");
+            }
+            console.log(visibleImage);
+            images.eq(visibleImage+2).show(200);
+        });
+
+        arrowLeft.click(function(){
+            arrowRight.removeClass("no-display");
+            images.eq(visibleImage+2).hide();
+            visibleImage--;
+            if(visibleImage == 0){
+                arrowLeft.addClass("no-display");
+            }
+            images.eq(visibleImage).show(200);
+        });
+    }
     function bxSlider() {
+        //slider for testimonials
         $('.bxslider').bxSlider();
     }
     function portfolioHover() {
+
+        //putting focus on selected portfolio elements
 
         var itemsToHover = $(".portfolio-item");
         var hoveringItems = $("img.hover-layer");
@@ -29,6 +68,9 @@ var Application = function(){
         });
     }
     function morePortfolio() {
+
+        //displaying more items in portfolio
+
         $(".portfolio-button").on("click", function(){
             $(".no-display").removeClass("no-display");
         });
@@ -40,6 +82,8 @@ var Application = function(){
     }
 
     function scrollingMenuFeatures(){
+
+        //sticky menu function
 
         var menu = $("nav.sticky-nav");
         var lastPositionTop = 0;
@@ -54,6 +98,8 @@ var Application = function(){
             if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
                 menu.removeClass("sticky");
             }
+
+        //focusing currently viewed section
 
             sections.each(function(index){
                 if(index + 1 >= sections.length){
@@ -77,9 +123,8 @@ var Application = function(){
     }
 
     return{
-        init:init,
-        scrollPage:scrollPage,
         scrollButton:scrollButton,
+        sliderThree:sliderThree,
         bxSlider:bxSlider,
         portfolioHover:portfolioHover,
         morePortfolio:morePortfolio,
@@ -91,16 +136,12 @@ var Application = function(){
 $(function(){
 
     var app = new Application();
-    app.init();
-    app.scrollPage();
     app.scrollButton();
+    app.sliderThree();
     app.bxSlider();
     app.portfolioHover();
     app.morePortfolio();
     app.scrollingMenuFeatures();
-
-
-
 
 
 });
