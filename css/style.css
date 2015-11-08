@@ -61,27 +61,27 @@ table {
   font-style: normal;
 }
 html {
-  font-size: 16px;
+  font-size: 100%;
   font-family: latoregular, sans-serif;
 }
 @media screen and (max-width: 767px) {
   html {
-    font-size: 10px;
+    font-size: 80%;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   html {
-    font-size: 12px;
+    font-size: 100%;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   html {
-    font-size: 12px;
+    font-size: 80%;
   }
 }
 @media (max-width: 1300px) {
   html {
-    font-size: 14px;
+    font-size: 80%;
   }
 }
 
@@ -137,6 +137,7 @@ html {
     width: auto;
     background-size: cover;
     box-sizing: border-box;
+    background-position: center;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
@@ -145,6 +146,7 @@ html {
     box-sizing: border-box;
     width: auto;
     background-size: cover;
+    background-position: center;
   }
 }
 @media screen and (max-height: 768px) and (orientation: landscape) {
@@ -161,8 +163,6 @@ html {
   position: absolute;
   left: 45%;
   top: 75%;
-  width: 10%;
-  height: auto;
 }
 @media screen and (max-width: 767px) {
   .arrow-down {
@@ -179,6 +179,11 @@ html {
     display: none;
   }
 }
+@media (max-width: 1300px) {
+  .arrow-down {
+    display: none;
+  }
+}
 
 .introduction-text {
   padding: 10% 0;
@@ -188,7 +193,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   .introduction-text {
-    padding-top: 20rem;
+    padding-top: 12rem;
     box-sizing: border-box;
   }
 }
@@ -213,10 +218,20 @@ html {
   color: #9f449b;
   font-size: inherit;
 }
+@media screen and (max-width: 767px) {
+  .introduction-text h1 {
+    font-size: 3rem;
+  }
+}
 .introduction-text h2 {
   font-size: 2.6rem;
   color: white;
   margin: 3%;
+}
+@media screen and (max-width: 767px) {
+  .introduction-text h2 {
+    font-size: 2.2rem;
+  }
 }
 .introduction-text p {
   color: white;
@@ -230,6 +245,7 @@ html {
   align-content: stretch;
   align-items: center;
   height: 34rem;
+  width: 100%;
   color: white;
 }
 @media screen and (max-width: 767px) {
@@ -460,19 +476,19 @@ svg {
 @media screen and (max-width: 767px) {
   .about-item-flex {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   .about-item-flex {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   .about-item-flex {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
 }
 .about-item-flex h2 {
@@ -587,6 +603,7 @@ svg {
 @media screen and (max-width: 767px) {
   .about-more-flex .about-more-text {
     margin: 2rem 0;
+    width: 60%;
   }
 }
 .about-more-flex .about-more-text p {

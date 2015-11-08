@@ -1,17 +1,17 @@
 html{
-  font-size: 16px;
+  font-size: 100%;
   font-family: latoregular, sans-serif;
   @include smartphone {
-    font-size: 10px;
+    font-size: 80%;
   }
   @include tablet {
-    font-size: 12px;
+    font-size: 100%;
   }
   @include tablet-portrait {
-    font-size: 12px;
+    font-size: 80%;
   }
   @include lower {
-    font-size: 14px;
+    font-size: 80%;
   }
 }
 
@@ -60,12 +60,14 @@ html{
     width: auto;
     background-size: cover;
     box-sizing: border-box;
+    background-position: center;
   }
   @include tablet-portrait {
     min-height: 980px;
     box-sizing: border-box;
     width: auto;
     background-size: cover;
+    background-position: center;
   }
   @include ipad{
     min-height: 768px;
@@ -80,8 +82,6 @@ html{
   position: absolute;
   left: 45%;
   top: 75%;
-  width: 10%;
-  height: auto;
   @include smartphone {
     display: none;
   }
@@ -89,6 +89,9 @@ html{
     display: none;
   }
   @include tablet-portrait {
+    display: none;
+  }
+  @include lower {
     display: none;
   }
 }
@@ -101,7 +104,7 @@ html{
   vertical-align: middle;
   font-family: existencelight, sans-serif;
   @include smartphone {
-    padding-top: 20rem;
+    padding-top: 12rem;
     box-sizing: border-box;
   }
   @include tablet-portrait {
@@ -120,11 +123,17 @@ html{
       color: map_get($colors, violetDefault);
       font-size: inherit;
     }
+    @include smartphone {
+      font-size: 3rem;
+    }
   }
   h2 {
     font-size: 2.6rem;
     color: white;
     margin: 3%;
+    @include smartphone {
+      font-size: 2.2rem;
+    }
   }
   p {
     color: white;
@@ -139,6 +148,7 @@ html{
   align-content: stretch;
   align-items: center;
   height: 34rem;
+  width: 100%;
   color: white;
   @include smartphone {
     display: none;
@@ -386,15 +396,15 @@ svg {
   margin: 15rem 0;
   @include smartphone {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
   @include tablet {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
   @include tablet-portrait {
     width: 50%;
-    margin: 2rem;
+    margin: 2rem 0;
   }
   h2 {
     color: map_get($colors, grayDark);
@@ -490,6 +500,7 @@ svg {
     }
     @include smartphone {
       margin: 2rem 0;
+      width: 60%;
     }
     p {
       font-size: 1rem;
