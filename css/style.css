@@ -61,7 +61,7 @@ table {
   font-style: normal;
 }
 html {
-  font-size: 100%;
+  font-size: 16px;
   font-family: latoregular, sans-serif;
 }
 @media screen and (max-width: 767px) {
@@ -75,11 +75,6 @@ html {
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
-  html {
-    font-size: 80%;
-  }
-}
-@media (max-width: 1300px) {
   html {
     font-size: 80%;
   }
@@ -127,7 +122,7 @@ html {
   background-image: url("../images/mainBackground.png");
   background-size: contain;
   width: 100%;
-  padding-bottom: 59%;
+  padding-bottom: 58%;
   height: 0;
   background-repeat: no-repeat;
 }
@@ -156,6 +151,7 @@ html {
     width: auto;
     background-size: auto;
     overflow: hidden;
+    background-position: center;
   }
 }
 
@@ -212,7 +208,7 @@ html {
 .introduction-text h1 {
   font-size: 5rem;
   color: white;
-  margin: 0 0 7% 0;
+  margin: 0 0 5% 0;
 }
 .introduction-text h1 span {
   color: #9f449b;
@@ -226,7 +222,7 @@ html {
 .introduction-text h2 {
   font-size: 2.6rem;
   color: white;
-  margin: 3%;
+  margin: 2%;
 }
 @media screen and (max-width: 767px) {
   .introduction-text h2 {
