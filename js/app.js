@@ -3,10 +3,12 @@
 var Application = function(){
     function scrollButton(){
 
-        //function for scrolling to the next section from the main menu
+        //function for scrolling to down by clicking the arrow button
 
         $("svg.arrow-down").on("click", function(){
-            $('html, body').animate({scrollTop: ($(".sticky-nav").offset().top)}, 800);
+            console.log("arrw");
+            var arrowPosition = $(window).scrollTop();
+            $('html, body').animate({scrollTop:  arrowPosition + $(window).height() }, 800);
         });
     }
     function sliderThree() {
