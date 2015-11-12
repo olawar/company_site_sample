@@ -13,9 +13,9 @@ Here you will find the source code written by me. To enjoy the page fully you wi
 
 Modifications:
 
-* no right and left arrows on BX Slider
+* right and left arrows removed on BX Slider
 
-* lightbox positioning from top is increased by 0.02*top
+* Lightbox positioning from top is increased by 0.02*top
 
 Enjoy!
 -- 

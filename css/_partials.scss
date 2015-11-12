@@ -632,15 +632,12 @@ ul.team-slider {
     padding: 1rem;
     @include smartphone {
       width: 100%;
-      display: block;
     }
     @include tablet {
       width: 100%;
-      display: block;
     }
     @include tablet-portrait {
       width: 100%;
-      display: block;
     }
   }
   h2 {
@@ -822,6 +819,9 @@ div.social-icons {
     color: black;
     font-size: 3rem;
     font-weight: lighter;
+    @include smartphone {
+      font-size: 2rem;
+    }
   }
   p {
     font-size: 1rem;

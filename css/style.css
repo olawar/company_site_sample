@@ -734,19 +734,16 @@ ul.team-slider li {
 @media screen and (max-width: 767px) {
   ul.team-slider li {
     width: 100%;
-    display: block;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
   ul.team-slider li {
     width: 100%;
-    display: block;
   }
 }
 @media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
   ul.team-slider li {
     width: 100%;
-    display: block;
   }
 }
 ul.team-slider h2 {
@@ -933,6 +930,11 @@ div.social-icons img {
   color: black;
   font-size: 3rem;
   font-weight: lighter;
+}
+@media screen and (max-width: 767px) {
+  .data-column h2 {
+    font-size: 2rem;
+  }
 }
 .data-column p {
   font-size: 1rem;

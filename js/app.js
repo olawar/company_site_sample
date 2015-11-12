@@ -18,37 +18,67 @@ var Application = function(){
         var arrowRight = $("#arrow-right");
         var arrowLeft = $("#arrow-left");
 
-        //displaying the first three elements
-
-        for(visibleImage = 0; visibleImage <=2; visibleImage++) {
+        if(window.matchMedia("(max-width: 800px)").matches){
+            images.addClass("no-display");
             images.eq(visibleImage).show();
+            arrowLeft.removeClass("no-display");
+
+            arrowRight.click(function(){
+                images.eq(visibleImage).hide();
+                visibleImage++;
+                if(visibleImage >= images.length){
+                    visibleImage=0;
+                }
+                images.eq(visibleImage).show();
+            });
+
+            arrowLeft.click(function(){
+                images.eq(visibleImage).hide();
+                visibleImage--;
+                if(visibleImage < 0){
+                    visibleImage=images.length-1;
+                }
+                images.eq(visibleImage).show();
+            });
+
+
         }
 
-        visibleImage=0;
+        else {
+            //displaying the first three elements
 
-        //function for sliding images of team members, showing 3 people at a time
-
-        arrowRight.click(function(){
-            console.log("klikam");
-            arrowLeft.removeClass("no-display");
-            images.eq(visibleImage).hide();
-            visibleImage++;
-            if((visibleImage+2) >= (images.length)){
-                arrowRight.addClass("no-display");
+            for(visibleImage = 0; visibleImage <=2; visibleImage++) {
+                images.eq(visibleImage).show();
             }
-            console.log(visibleImage);
-            images.eq(visibleImage+2).show(200);
-        });
 
-        arrowLeft.click(function(){
-            arrowRight.removeClass("no-display");
-            images.eq(visibleImage+2).hide();
-            visibleImage--;
-            if(visibleImage == 0){
-                arrowLeft.addClass("no-display");
-            }
-            images.eq(visibleImage).show(200);
-        });
+            visibleImage=0;
+
+            //function for sliding images of team members, showing 3 people at a time
+
+            arrowRight.click(function(){
+                console.log("klikam");
+                arrowLeft.removeClass("no-display");
+                images.eq(visibleImage).hide();
+                visibleImage++;
+                if((visibleImage+2) >= (images.length)){
+                    arrowRight.addClass("no-display");
+                }
+                console.log(visibleImage);
+                images.eq(visibleImage+2).show(200);
+            });
+
+            arrowLeft.click(function(){
+                arrowRight.removeClass("no-display");
+                images.eq(visibleImage+2).hide();
+                visibleImage--;
+                if(visibleImage == 0){
+                    arrowLeft.addClass("no-display");
+                }
+                images.eq(visibleImage).show(200);
+            });
+        }
+
+
     }
     function bxSlider() {
         //slider for testimonials
