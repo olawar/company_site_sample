@@ -17,6 +17,10 @@ Modifications:
 
 * Lightbox positioning from top is increased by 0.02*top
 
+## References
+
+Hamburger menu icon by Freepik from FlatIcon.com
+
 Enjoy!
 -- 
 Ola Warzecha
