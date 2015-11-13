@@ -1,11 +1,11 @@
-#A company sample page
+#A company sample page built with Flexbox
 
 ##General info 
 
 A responsive page based on Flexbox developed during workshops at the Coder's Lab front-end course - it is based on a provided design in a PSD file. 
 Images sliced by me. 
 
-It employs some simple JS/jQuery scroll / click functions, BX Slider. Lightbox2 gallery and more.
+It employs some simple JS/jQuery scroll / click functions, BX Slider, Lightbox2 gallery and more.
 
 ##The Code
 

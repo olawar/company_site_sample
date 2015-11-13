@@ -104,7 +104,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   .container-content {
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -163,7 +163,7 @@ html {
 
 .arrow-down {
   position: fixed;
-  left: 48%;
+  left: 47.2%;
   top: 85%;
 }
 @media screen and (max-width: 767px) {
@@ -526,6 +526,7 @@ svg {
   .about-item-flex {
     width: 50%;
     margin: 2rem 0;
+    padding: 0.5rem;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -548,7 +549,7 @@ svg {
 .about-item-flex p {
   color: #676767;
   font-weight: lighter;
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4rem;
 }
 .about-item-flex object {
@@ -557,8 +558,8 @@ svg {
 }
 @media screen and (max-width: 767px) {
   .about-item-flex object {
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -699,6 +700,14 @@ svg {
   margin-right: auto;
   padding-top: 7rem;
   padding-bottom: 3rem;
+  height: 30%;
+  width: 30%;
+}
+@media screen and (max-width: 767px) {
+  .about-divider object {
+    height: 20%;
+    width: 20%;
+  }
 }
 .about-divider p {
   color: white;
@@ -810,8 +819,8 @@ ul.team-slider img.person-photo {
 }
 @media screen and (max-width: 767px) {
   ul.team-slider img.person-photo {
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 35%;
   }
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -1200,6 +1209,16 @@ img.hover-enter {
 .contact-flex p:nth-child(n+2) {
   font-weight: bold;
 }
+@media screen and (max-width: 767px) {
+  .contact-flex p {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .contact-flex p {
+    padding: 0;
+  }
+}
 
 .contact-icons li {
   display: inline-block;
@@ -1208,6 +1227,18 @@ img.hover-enter {
   height: 3rem;
   width: auto;
   margin-left: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .contact-icons li img {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 980px) and (orientation: portrait) {
+  .contact-icons li img {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 }
 
 .contact-column {

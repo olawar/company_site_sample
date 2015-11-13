@@ -145,13 +145,16 @@ var Application = function(){
         var lastPositionTop = 0;
         var sections = $("section");
         var links = $(".activity");
+        var desktopContainer = $("div.nav-content");
+        var menuMobile = $(".menu-button");
 
         if(window.matchMedia("(max-width: 800px)").matches) {
 
             //sticky menu for mobile devices
 
-            $("#navigation-container").prependTo(".company-page");
-            var menuMobile = $(".menu-button");
+            $("#navigation-container").prependTo("body");
+
+            desktopContainer.removeClass("container-content");
 
             $(window).on("scroll", function () {
                 if (menuMobile.hasClass("sticky") === false && $(this).scrollTop() > menuMobile.offset().top) {
