@@ -45,7 +45,7 @@ var Application = function(){
 
         //version for smartphones showing one person at a time
 
-        if(window.matchMedia("(max-width: 800px)").matches){
+        if(window.matchMedia("(max-width: 1000px)").matches){
             images.addClass("no-display");
             images.eq(visibleImage).show();
             arrowLeft.removeClass("no-display");
