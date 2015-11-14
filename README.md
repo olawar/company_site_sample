@@ -5,7 +5,7 @@
 A responsive page based on Flexbox developed during workshops at the Coder's Lab front-end course - it is based on a provided design in a PSD file. 
 Images sliced by me. 
 
-It employs some simple JS/jQuery scroll / click functions, BX Slider, Lightbox2 gallery and more.
+It employs some simple JS/jQuery scroll / click functions, a carousel developed durig Coder's Lab workshops, a simple gallery filter by tags, BX Slider, Lightbox2 gallery and more.
 
 ##The Code
 
@@ -15,7 +15,7 @@ Modifications:
 
 * right and left arrows removed on BX Slider
 
-* Lightbox positioning from top is increased by 0.02*top
+* in Lightbox: clicked image positioning from top is increased by 0.02*top
 
 ## References
 

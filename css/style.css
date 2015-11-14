@@ -163,8 +163,9 @@ html {
 
 .arrow-down {
   position: fixed;
-  left: 47.2%;
+  left: 47.5%;
   top: 85%;
+  z-index: 10000000;
 }
 @media screen and (max-width: 767px) {
   .arrow-down {
@@ -1058,18 +1059,23 @@ div.social-icons img {
 }
 .portfolio-nav li {
   display: inline-block;
-  font-size: 1rem;
-  text-transform: uppercase;
+}
+
+.nav-tag {
+  display: block;
+  width: 4rem;
   border: 1px solid black;
   height: 2rem;
-  width: 4rem;
   border-radius: 0.25rem;
   background-color: white;
   padding: 0.5rem 0;
   box-sizing: border-box;
   text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
-.portfolio-nav li:hover {
+.nav-tag:hover {
   background-color: #9f449b;
   border: 1px solid #9f449b;
   color: white;

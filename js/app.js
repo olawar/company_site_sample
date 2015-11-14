@@ -136,6 +136,38 @@ var Application = function(){
             $(".portfolio-less-button").addClass("no-display");
         });
     }
+    function portfolioFilter() {
+        //filtering items in portfolio by tag
+
+        $("a[name='all']").click(function (e) {
+            e.preventDefault();
+            $("div.portfolio-item").show();
+            $("div.image-item").show();
+          });
+        $("a[name='web']").click(function (e) {
+            e.preventDefault();
+            $(".portfolio-flex div:not(.web)").hide();
+            $("div.web").show();
+            $("div.image-item").show();
+            $("p.watch-more").hide();
+        });
+        $("a[name='icons']").click(function (e) {
+            e.preventDefault();
+            $(".portfolio-flex div:not(.icons)").hide();
+            $("div.icons").show();
+            $("div.image-item").show();
+            $("p.watch-more").hide();
+        });
+        $("a[name='apps']").click(function (e) {
+            e.preventDefault();
+            $(".portfolio-flex div:not(.apps)").hide();
+            $("div.apps").show();
+            $("div.image-item").show();
+            $("p.watch-more").hide();
+        });
+
+    }
+
 
     function scrollingMenuFeatures(){
 
@@ -213,6 +245,7 @@ var Application = function(){
         bxSlider:bxSlider,
         portfolioHover:portfolioHover,
         morePortfolio:morePortfolio,
+        portfolioFilter:portfolioFilter,
         scrollingMenuFeatures:scrollingMenuFeatures
     }
 };
@@ -227,6 +260,7 @@ $(function(){
     app.bxSlider();
     app.portfolioHover();
     app.morePortfolio();
+    app.portfolioFilter();
     app.scrollingMenuFeatures();
 
 
