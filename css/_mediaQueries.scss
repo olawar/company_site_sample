@@ -34,7 +34,7 @@ $lower-width: 1300px;
 }
 
 @mixin ipad {
-  @media screen and (max-height: #{$ipad-width})and(orientation: landscape) {
+  @media only screen and (max-height: #{$ipad-width})and (max-width: #{$tablet-width})and(orientation: landscape) {
     @content;
   }
 }

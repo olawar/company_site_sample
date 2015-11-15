@@ -81,14 +81,12 @@ var Application = function(){
             //function for sliding images of team members, showing 3 people at a time
 
             arrowRight.click(function(){
-                console.log("klikam");
                 arrowLeft.removeClass("no-display");
                 images.eq(visibleImage).hide();
                 visibleImage++;
                 if((visibleImage+2) >= (images.length)){
                     arrowRight.addClass("no-display");
                 }
-                console.log(visibleImage);
                 images.eq(visibleImage+2).show(200);
             });
 

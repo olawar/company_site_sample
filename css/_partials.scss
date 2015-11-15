@@ -158,6 +158,7 @@ html{
   height: 34rem;
   width: 100%;
   color: white;
+  text-decoration: none;
   @include smartphone {
     display: none;
   }
@@ -965,6 +966,7 @@ div.social-icons {
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;
+  color: black;
   &:hover {
     background-color: map_get($colors, violetDefault);
     border: 1px solid map_get($colors, violetDefault);
